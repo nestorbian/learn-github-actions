@@ -1,0 +1,24 @@
+name: Create Release
+on:
+  push:
+    tags:
+      - 'v*'
+permissions:
+  contents: write
+
+jobs:
+  build: # job名称
+    runs-on: windows-latest
+    steps:
+      - name: Create Executable
+        uses: sayyid5416/pyinstaller@v1
+        with:
+          python_ver: '3.10'
+          spec: 'main.py' # 指定入口py
+          upload_exe_with_name: 'nestor_package' # 打包后压缩包的名称
+          options: --onefile # 一个压缩包
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: ./dist/**
