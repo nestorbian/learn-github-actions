@@ -33,7 +33,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         S0URCE: "target/github-actions-springboot-1.0.jar"
         REM0TE_H0ST: 180.76.120.166
-        REMOTE_USER: rOot
+        REMOTE_USER: root
         TARGET: /root/springboot/github-actions.jar
         SCRIPT_AFTER: |
           pkill -f 'java -jar /root/springboot/github-actions.jar'
