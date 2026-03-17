@@ -1,0 +1,21 @@
+{
+  "name": "@nestorbian/learn-github-actions",
+  "version": "1.0.0",
+  "description": "学习github actions的常用操作",
+  "homepage": "https://github.com/nestorbian/learn-github-actions#readme",
+  "bugs": {
+    "url": "https://github.com/nestorbian/learn-github-actions/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nestorbian/learn-github-actions.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "exit 0"
+  },
+  "publishConfig": {"@nestorbian:registry": "https://npm.pkg.github.com"}
+}
